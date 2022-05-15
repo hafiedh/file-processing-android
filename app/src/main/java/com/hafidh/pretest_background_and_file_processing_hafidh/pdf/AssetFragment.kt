@@ -41,4 +41,9 @@ class AssetFragment : Fragment() {
             .load()
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
+    }
+
 }

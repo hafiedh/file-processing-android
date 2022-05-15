@@ -1,11 +1,10 @@
 package com.hafidh.pretest_background_and_file_processing_hafidh.pdf
 
-import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.hafidh.pretest_background_and_file_processing_hafidh.R
 import com.hafidh.pretest_background_and_file_processing_hafidh.databinding.FragmentMenuBinding
@@ -26,6 +25,9 @@ class MenuFragment : Fragment(){
         super.onViewCreated(view, savedInstanceState)
         setOnWebViewClickListener()
         setOnAssetsClickListener()
+        setOnStorageClickListener()
+        setOnInternetClickListener()
+
     }
 
     private fun setOnWebViewClickListener(){
@@ -37,6 +39,18 @@ class MenuFragment : Fragment(){
     private fun setOnAssetsClickListener(){
         binding.buttonAssets.setOnClickListener {
             findNavController().navigate(R.id.action_menuFragment_to_assetFragment)
+        }
+    }
+
+    private fun setOnStorageClickListener(){
+        binding.buttonStorage.setOnClickListener {
+            findNavController().navigate(R.id.action_menuFragment_to_storageFragment)
+        }
+    }
+
+    private fun setOnInternetClickListener(){
+        binding.buttonInternet.setOnClickListener {
+            findNavController().navigate(R.id.action_menuFragment_to_internetFragment)
         }
     }
 
