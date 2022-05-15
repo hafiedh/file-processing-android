@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pdf_navigation"
+    app:startDestination="@id/menuFragment">
+
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.hafidh.pretest_background_and_file_processing_hafidh.pdf.MenuFragment"
+        android:label="MenuFragment" >
+        <action
+            android:id="@+id/action_menuFragment_to_webViewFragment"
+            app:destination="@id/webViewFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_assetFragment"
+            app:destination="@id/assetFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_internetFragment"
+            app:destination="@id/internetFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_storageFragment"
+            app:destination="@id/storageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/webViewFragment"
+        android:name="com.hafidh.pretest_background_and_file_processing_hafidh.pdf.WebViewFragment"
+        android:label="WebViewFragment" />
+    <fragment
+        android:id="@+id/assetFragment"
+        android:name="com.hafidh.pretest_background_and_file_processing_hafidh.pdf.AssetFragment"
+        android:label="fragment_asset"
+        tools:layout="@layout/fragment_asset" />
+    <fragment
+        android:id="@+id/internetFragment"
+        android:name="com.hafidh.pretest_background_and_file_processing_hafidh.pdf.InternetFragment"
+        android:label="fragment_internet"
+        tools:layout="@layout/fragment_internet" />
+    <fragment
+        android:id="@+id/storageFragment"
+        android:name="com.hafidh.pretest_background_and_file_processing_hafidh.pdf.StorageFragment"
+        android:label="fragment_storage"
+        tools:layout="@layout/fragment_storage" />
+</navigation>

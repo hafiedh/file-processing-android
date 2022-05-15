@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/buttonWebView"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_margin="8dp"
+        android:background="@drawable/rounded_bg"
+        android:text="@string/web_view"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/buttonAssets"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_margin="8dp"
+        android:background="@drawable/rounded_bg"
+        android:text="@string/assets"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/buttonStorage"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_margin="8dp"
+        android:background="@drawable/rounded_bg"
+        android:text="@string/storage"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/buttonInternet"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_margin="8dp"
+        android:background="@drawable/rounded_bg"
+        android:text="@string/internet"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+</LinearLayout>
