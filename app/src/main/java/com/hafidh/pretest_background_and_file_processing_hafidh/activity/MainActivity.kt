@@ -1,21 +1,24 @@
 package com.hafidh.pretest_background_and_file_processing_hafidh.activity
 
 import android.content.Intent
-import android.media.Image
-import androidx.appcompat.app.AppCompatActivity
+import android.content.IntentFilter
 import android.os.Bundle
-import com.hafidh.pretest_background_and_file_processing_hafidh.R
+import androidx.appcompat.app.AppCompatActivity
 import com.hafidh.pretest_background_and_file_processing_hafidh.databinding.ActivityMainBinding
 import com.hafidh.pretest_background_and_file_processing_hafidh.image.HandleImageActivity
 import com.hafidh.pretest_background_and_file_processing_hafidh.pdf.HandlePdfActivity
+import com.hafidh.pretest_background_and_file_processing_hafidh.utils.AirPlaneMode
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
+    lateinit var airPlane: AirPlaneMode
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        airPlaneMode()
         pdfClick()
+        imageClick()
     }
 
     private fun pdfClick() {
@@ -27,12 +30,25 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun ImageClick() {
+    private fun imageClick() {
         binding.btnImageHandle.setOnClickListener {
             Intent(this, HandleImageActivity::class.java).also {
                 startActivity(it)
                 finish()
             }
         }
+    }
+
+    private fun airPlaneMode() {
+        airPlane = AirPlaneMode()
+        IntentFilter().also {
+            it.addAction(Intent.ACTION_AIRPLANE_MODE_CHANGED)
+            registerReceiver(airPlane, it)
+        }
+    }
+
+    override fun onStop() {
+        super.onStop()
+        unregisterReceiver(airPlane)
     }
 }

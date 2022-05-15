@@ -13,4 +13,5 @@
     <string name="toast_error">Terjadi kesalahan</string>
     <string name="toast_error_page">Error oad page</string>
     <string name="toast_download_complete">Download completed</string>
+    <string name="add_image">Add Image</string>
 </resources>
